@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body style="background-color:grey;">
+<form action="{% url 'form' %}">
+    {% csrf_token %}
+    <button type="submit">Form</button>
+</form>
+</body>
+</html>

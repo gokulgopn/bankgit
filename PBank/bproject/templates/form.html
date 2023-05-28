@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill the form</title>
+</head>
+<body style="background-color:grey; margin-left:45%; display:table;">
+<h1>Fill the form</h1>
+<form action="{% url 'final' %}" method="post">
+    {% csrf_token %}
+
+    <input type="text" placeholder="Name" style="width:198px;"><br><br>
+
+    <input type="date" placeholder="DOB" style="width:198px;"><br><br>
+
+    <input type="number" placeholder="Age" style="width:198px;"><br><br>
+
+    <label for="gender">Gender:</label>
+    <select name="gender">
+        <option value="">Please select one</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+    </select><br><br>
+
+    <input type="number" placeholder="Phone Number" style="width:198px;"><br><br>
+
+    <input type="email" placeholder="Email" style="width:198px;"><br><br>
+
+    <input type="text" placeholder="Address" style="width:198px; height:50px;"><br><br>
+
+    <label for="district">District:</label>
+<select name="district" id="district">
+    <option value="">Select your district</option>
+    <option value="Kazargod">Kazargod</option>
+    <option value="Kannur">Kannur</option>
+    <option value="Wayanad">Wayanad</option>
+    <option value="Kozhikode">Kozhikode</option>
+    <option value="Malappuram">Malappuram</option>
+    <option value="Palakkad">Palakkad</option>
+    <option value="Thrissur">Thrissur</option>
+    <option value="Ernakulam">Ernakulam</option>
+    <option value="Idukki">Idukki</option>
+    <option value="Kottayam">Kottayam</option>
+    <option value="Alappuzha">Alappuzha</option>
+    <option value="Pathanamthitta">Pathanamthitta</option>
+    <option value="Kollam">Kollam</option>
+    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+</select><br><br>
+
+<!--<label for="branch">Branch:</label>-->
+<!--<select name="branch" id="branch">-->
+<!--    <option value="">Select your branch</option>-->
+<!--    <option value="aluva">Aluva</option>-->
+<!--    <option value="aluva">Edapally</option>-->
+<!--    <option value="aaa">aaa</option>-->
+<!--</select><br>-->
+
+
+
+    <label for="account">Account:</label>
+    <select name="account">
+        <option value="">Account Type</option>
+        <option value="saving">Savings Account</option>
+        <option value="current">Current Account</option>
+        <option value="salary">Salary Account</option>
+        <option value="nri">NRI Account</option>
+    </select><br><br>
+
+<header>Materials provide:</header>
+
+    <input type="checkbox" id="debit" name="debitcard" value="debitcard">
+    <label for="debitcard">Debitcard</label><br>
+    <input type="checkbox" id="credit" name="creditcard" value="creditcard">
+    <label for="creditcard">Creditcard</label><br>
+    <input type="checkbox" id="checkb" name="checkbook" value="checkbook">
+    <label for="checkbook">CheckBook</label><br><br>
+
+
+    <button type="submit">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="{% url 'final' %}">
+    <button type="button">Logout</button>
+</a>
+</form>
+</body>
+</html>
